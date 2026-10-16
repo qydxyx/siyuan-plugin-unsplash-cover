@@ -2,7 +2,7 @@
   "name": "siyuan-plugin-unsplash-cover",
   "author": "qydxyx",
   "url": "https://github.com/qydxyx/siyuan-plugin-unsplash-cover",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "minAppVersion": "3.8.0",
   "backends": [
     "windows",
@@ -36,7 +36,7 @@
     "zh-CN": "README_zh_CN.md"
   },
   "icon": "icon.png",
-  "preview": "preview.png",
+  "preview": "preview.jpg",
   "funding": {},
   "keywords": [
     "unsplash",
