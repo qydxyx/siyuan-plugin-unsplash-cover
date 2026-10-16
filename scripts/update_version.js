@@ -5,7 +5,7 @@
  */
 import fs from "node:fs";
 
-const version = process.argv[2];
+const version = process.argv.slice(2).find((arg) => arg !== "--");
 if (!version || !/^\d+\.\d+\.\d+$/.test(version)) {
     console.error("Usage: pnpm run update-version -- <x.y.z>");
     process.exit(1);

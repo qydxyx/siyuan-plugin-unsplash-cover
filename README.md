@@ -6,6 +6,19 @@ Pick photos from [Unsplash](https://unsplash.com) as the cover image (`title-img
 The picker opens with the current document title already tokenized into search keywords, so the first
 screen of candidates is usually relevant without typing anything.
 
+## Where to click
+
+The plugin does not replace SiYuan's built-in cover dialog (`Set cover image` → 内置/我的); it adds its
+own entries. There are four of them:
+
+1. **Top bar icon** — the picture icon in the top-right icon strip (tooltip `Unsplash Cover`).
+   If you cannot see it, check `Settings → Appearance`/the plugin list for hidden top-bar entries.
+2. **Document title icon** — click the document icon on the left of the title, then choose
+   `Unsplash: open the photo picker` or `Unsplash: randomize the cover image`.
+3. **Command palette** — click the lightning icon in the top bar (or `Ctrl/Cmd+P`), search for
+   `Unsplash`.
+4. **Hotkeys** — both commands can be bound in `Settings → Keymap`.
+
 ## Features
 
 - **Title-driven pre-search** — the document title is cleaned (dates, brackets, "读书笔记/meeting notes"-style

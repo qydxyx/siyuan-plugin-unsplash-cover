@@ -83,6 +83,30 @@ export default class UnsplashCoverPlugin extends Plugin {
         this.settingDialog?.destroy();
     }
 
+    /**
+     * Must be overridden: when this hook is absent SiYuan reloads the entire plugin
+     * for every petal write. Because onunload() flushes the configuration, such a
+     * reload writes the petal file again and the plugin ends up reloading itself in
+     * a loop (the toolbar entry flickers). Changes from another frontend are picked
+     * up by re-reading the files instead of reloading.
+     */
+    override async onDataChanged(reason?: string) {
+        if (reason !== "sync" && reason !== "overwrite") {
+            return;
+        }
+        try {
+            const config = await loadConfig(this);
+            const secret = this.readSecret();
+            if (secret && !config.accessKey) {
+                config.accessKey = secret;
+            }
+            this.configStore.applyExternal(config);
+            this.assetCache = await loadAssetCache(this);
+        } catch (error) {
+            console.warn("[unsplash-cover] failed to refresh the configuration after an external change", error);
+        }
+    }
+
     override async uninstall() {
         await this.removeData("unsplash-cover-config.json");
         await this.removeData("unsplash-cover-assets.json");
