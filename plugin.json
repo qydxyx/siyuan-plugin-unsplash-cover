@@ -1,0 +1,48 @@
+{
+  "name": "siyuan-plugin-unsplash-cover",
+  "author": "qydxyx",
+  "url": "https://github.com/qydxyx/siyuan-plugin-unsplash-cover",
+  "version": "0.1.0",
+  "minAppVersion": "3.8.0",
+  "backends": [
+    "windows",
+    "linux",
+    "darwin",
+    "docker",
+    "ios",
+    "android",
+    "harmony"
+  ],
+  "frontends": [
+    "desktop",
+    "mobile",
+    "browser-desktop",
+    "browser-mobile",
+    "desktop-window"
+  ],
+  "displayName": {
+    "default": "Unsplash Cover",
+    "zh_CN": "Unsplash 题头图",
+    "zh-CN": "Unsplash 题头图"
+  },
+  "description": {
+    "default": "Search or pick random Unsplash photos as document covers, with smart title keyword extraction.",
+    "zh_CN": "接入 Unsplash 图库补充文档题头图，支持按文档标题智能分词预搜与一键随机换图。",
+    "zh-CN": "接入 Unsplash 图库补充文档题头图，支持按文档标题智能分词预搜与一键随机换图。"
+  },
+  "readme": {
+    "default": "README.md",
+    "zh_CN": "README_zh_CN.md",
+    "zh-CN": "README_zh_CN.md"
+  },
+  "icon": "icon.png",
+  "preview": "preview.png",
+  "funding": {},
+  "keywords": [
+    "unsplash",
+    "cover",
+    "banner",
+    "title-img",
+    "题头图"
+  ]
+}

@@ -1,0 +1,4 @@
+# Vite/sass do not need @parcel/watcher's native build script (that is only used by
+# the standalone `sass --watch` CLI), so keep installs deterministic and skip it.
+allowBuilds:
+  '@parcel/watcher': false
