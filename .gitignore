@@ -10,3 +10,6 @@ dev
 dist
 build
 tmp
+
+# 本地开发计划文档，不随仓库发布
+DEVELOPMENT_PLAN*.md
